@@ -413,6 +413,20 @@ function Footer() {
           <a href={`mailto:${site.email}`}>Email</a>
         </nav>
       </div>
+
+         <small>
+              Designed & Developed by{" "}
+              <a
+              href="https://wa.me/923008115288"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="developer-link"
+                aria-label="Abdullah Badar Profile"
+              >
+                Abdullah Badar
+              </a>
+            </small>
+
     </footer>
   );
 }
