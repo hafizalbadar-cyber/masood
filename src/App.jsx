@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { site, regions, services, steps, faqs, defectTypes } from "./content.js";
+import { site, regions, services, steps, faqs, defectTypes,ser } from "./content.js";
 
 const NAV = [
   { href: "#services", label: "Services" },
@@ -64,7 +64,7 @@ function Hero() {
             {site.availability}
           </p>
           <h1 id="hero-title">
-            Your eBay account, <span className="grad">healthy and selling.</span>
+            Your eBay account, <span className="grad">health and selling.</span>
           </h1>
           <p className="lead">{site.intro}</p>
 
@@ -72,13 +72,35 @@ function Hero() {
             <a className="btn btn-primary" href="#contact">Book a consultation</a>
             <a className="btn btn-ghost" href="#services">Explore services</a>
           </div>
-
-          <ul className="regions" aria-label="Markets served">
-            {regions.map((r) => (
-              <li key={r.code}>{r.name}</li>
-            ))}
-            <li>And worldwide</li>
-          </ul>
+<br></br>
+       <ul
+  className="ser"
+  aria-label="Markets served"
+  style={{
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "10px",
+    listStyle: "none",
+    padding: 0,
+    margin: 0,
+  }}
+>
+  {ser.map((r) => (
+    <li
+      key={r.code}
+      style={{
+        padding: "6px 12px",
+        backgroundColor: "#f3f4f6",
+        border: "1px solid #e5e7eb",
+        borderRadius: "6px",
+        fontSize: "14px",
+        color: "#374151",
+      }}
+    >
+      {r.name}
+    </li>
+  ))}
+</ul>
         </div>
 
         <figure className="hero-figure">
@@ -234,6 +256,16 @@ function Contact() {
           </div>
           <div className="contact-actions">
             <a className="btn btn-primary" href={`mailto:${site.email}`}>Email Masood</a>
+
+
+<a
+  className="btn btn-primary"
+  href="https://wa.me/923027848840"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Contact on WhatsApp
+</a>
             <a className="btn btn-outline" href={site.fiverr} target="_blank" rel="noopener noreferrer">
               Find me on Fiverr
             </a>
