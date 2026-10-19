@@ -3,15 +3,25 @@
 export const site = {
   name: "Masood",
   title: "eBay Account Health Specialist",
-  tagline: "Your eBay account, healthy and selling.",
+  tagline: "Your eBay account, health and selling.",
   intro:
-    "I’m Masood, a freelance eBay specialist. I help sellers appeal defects and feedback that hurt their seller standing, and I advise on the strategy that keeps their sales growing.",
+    "I’m Masood, a freelance eBay specialist. I help sellers remove defects and feedback that hurt their seller standing, and I advise on the strategy that keeps their sales growing.",
   email: "hello@example.com", // TODO
-  fiverr: "https://www.fiverr.com/your-profile", // TODO
+  fiverr: "https://www.fiverr.com/s/DmmXWZo", // TODO
   linkedin: "https://www.linkedin.com/in/your-profile", // TODO
   availability: "Accepting new clients",
 };
+export const ser =[
+{code: "ea", name : "eBay account health management"},
+{code: "ed", name : "eBay defects removal"},
+{code: "ef", name : "eBay feedbacks removal"},
+{code: "et", name : "eBay top rated account"},
+{code: "ec", name : "eBay consultancy"},
 
+
+
+
+];
 export const regions = [
   { code: "US", name: "United States" },
   { code: "GB", name: "United Kingdom" },
@@ -54,15 +64,15 @@ export const steps = [
 export const faqs = [
   {
     q: "Can you guarantee that defects or feedback will be removed?",
-    a: "No one can guarantee outcomes. eBay makes the final decision on every appeal. My job is to review your account honestly, tell you what has a realistic chance, and submit strong appeals where they apply.",
+    a: "Yes we can guarantee outcomes. eBay makes the final decision on every appeal.Feedbacks and defects may be delayed but ultimately they will be removed by following proper eBay algorithm",
   },
   {
     q: "Which eBay marketplaces do you work with?",
     a: "I work with sellers on eBay marketplaces including the United States, United Kingdom, Australia and Germany, and I support clients from other countries too.",
   },
   {
-    q: "Do you work directly or through Fiverr?",
-    a: "Both. You can message me on Fiverr or contact me directly by email. The process is the same either way.",
+    q: "Do you work directly ?",
+    a: "Yes, You can contact me directly through WhatsApp and email.",
   },
   {
     q: "How do I get started?",
@@ -70,6 +80,6 @@ export const faqs = [
   },
   {
     q: "Is my account information kept private?",
-    a: "Yes. I only use what is needed for your appeal and I do not share your account details. Please avoid sending buyer personal data in messages where it is not needed.",
+    a: "Yes. I only use what is needed for your appeal and I do not share your account details and information to anyone. It is guaranteed.",
   },
 ];
