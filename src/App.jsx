@@ -138,22 +138,76 @@ function TrustStrip() {
 }
 
 /* ---------- Services ---------- */
+
 function Services() {
   return (
-    <section id="services" className="section" aria-labelledby="services-title">
+    <section
+      id="services"
+      className="section"
+      aria-labelledby="services-title"
+    >
       <div className="container">
         <header className="section-head">
           <p className="eyebrow">Services</p>
-          <h2 id="services-title">One specialist, focused entirely on eBay</h2>
-          <p className="muted">From account health to sales, you work with someone who knows the platform in depth.</p>
+          <h2 id="services-title">
+            One specialist, focused entirely on eBay
+          </h2>
+          <p className="muted">
+            From account health to sales, you work with someone
+            who knows the platform in depth.
+          </p>
         </header>
 
+        {/* Showcase Images */}
+        <section
+          className="showcase"
+          aria-labelledby="showcase-title"
+        >
+          <header className="section-head showcase-heading">
+            <p className="eyebrow">Overview</p>
+            <h2 id="showcase-title">What I offer on eBay</h2>
+            <p className="muted">
+              Professional eBay support to help improve your
+              account health, customer experience, and sales.
+            </p>
+          </header>
+
+          <div className="showcase-grid">
+            <figure className="showcase-item">
+              <img
+                src="/promo-overview.webp"
+                width="1079"
+                height="607"
+                loading="lazy"
+                decoding="async"
+                alt="eBay virtual assistant services including consultancy, customer support, and account health management"
+              />
+            </figure>
+
+            <figure className="showcase-item">
+              <img
+                src="/promo-defects.webp"
+                width="1080"
+                height="604"
+                loading="lazy"
+                decoding="async"
+                alt="eBay account management services for late shipments, transaction defects, and negative feedback"
+              />
+            </figure>
+          </div>
+        </section>
+
+        {/* Service Cards */}
         <div className="cards">
           {services.map((s, i) => (
             <article key={s.title} className="card">
-              <span className="card-index" aria-hidden="true">0{i + 1}</span>
+              <span className="card-index" aria-hidden="true">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+
               <h3>{s.title}</h3>
               <p>{s.text}</p>
+
               <ul className="check-list">
                 {s.points.map((p) => (
                   <li key={p}>{p}</li>
@@ -166,6 +220,7 @@ function Services() {
     </section>
   );
 }
+
 
 /* ---------- Process ---------- */
 function Process() {
@@ -246,28 +301,94 @@ function FAQ() {
 /* ---------- Contact ---------- */
 function Contact() {
   return (
-    <section id="contact" className="section contact" aria-labelledby="contact-title">
+    <section
+      id="contact"
+      className="section contact"
+      aria-labelledby="contact-title"
+    >
       <div className="container">
         <div className="contact-card">
           <div>
-            <p className="eyebrow eyebrow-light">Let’s fix your account</p>
-            <h2 id="contact-title">Message me with your eBay issue</h2>
-            <p className="muted-light">I’ll reply with clear next steps. No obligation to hire.</p>
+            <p className="eyebrow eyebrow-light">
+              Let’s fix your account
+            </p>
+            <h2 id="contact-title">
+              Message me with your eBay issue
+            </h2>
+            <p className="muted-light">
+              I’ll reply with clear next steps. No obligation to hire.
+            </p>
           </div>
+
           <div className="contact-actions">
-            <a className="btn btn-primary" href={`mailto:${site.email}`}>Email Masood</a>
+            {/* Email */}
+            <a
+              className="contact-link"
+              href={`mailto:${site.email}`}
+              aria-label={`Email Masood at ${site.email}`}
+            >
+              <span className="contact-icon email-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect
+                    x="3"
+                    y="5"
+                    width="18"
+                    height="14"
+                    rx="2"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
+                  <path
+                    d="m4 7 8 6 8-6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+              <span className="contact-details">
+                <strong>Email</strong>
+                <span>{site.email}</span>
+              </span>
+            </a>
 
+            {/* WhatsApp */}
+            <a
+              className="contact-link"
+              href="https://wa.me/923027848840"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Contact Masood on WhatsApp"
+            >
+              <span className="contact-icon whatsapp-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.04 2a9.9 9.9 0 0 0-8.47 15.03L2 22l5.12-1.34A9.96 9.96 0 1 0 12.04 2Zm0 18.2a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.04.8.81-2.96-.2-.31A8.2 8.2 0 1 1 12.04 20.2Zm4.5-6.15c-.25-.13-1.48-.73-1.71-.81-.23-.08-.4-.13-.56.13-.17.25-.64.81-.78.98-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.14-.25-.02-.39.11-.52.11-.11.25-.29.38-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.08s.9 2.42 1.02 2.59c.13.17 1.77 2.7 4.28 3.78.6.26 1.07.42 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.48-.6 1.69-1.19.21-.58.21-1.08.15-1.19-.06-.1-.23-.17-.48-.29Z" />
+                </svg>
+              </span>
+              <span className="contact-details">
+                <strong>WhatsApp</strong>
+                <span>+92 302 7848840</span>
+              </span>
+            </a>
 
-<a
-  className="btn btn-primary"
-  href="https://wa.me/923027848840"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Contact on WhatsApp
-</a>
-            <a className="btn btn-outline" href={site.fiverr} target="_blank" rel="noopener noreferrer">
-              Find me on Fiverr
+            {/* Fiverr */}
+            <a
+              className="contact-link"
+              href={site.fiverr}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Masood's Fiverr profile"
+            >
+              <span className="contact-icon fiverr-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M15.5 3.5a2 2 0 1 1 4 0 2 2 0 0 1-4 0ZM8 7h2V5.8c0-2.4 1.5-3.8 4-3.8h2v3h-1.5c-1 0-1.5.5-1.5 1.5V7h3v3h-3v8h3v3H7v-3h2v-8H6V7h2Z" />
+                </svg>
+              </span>
+              <span className="contact-details">
+                <strong>Fiverr</strong>
+                <span>@Qasim Ijaz</span>
+              </span>
             </a>
           </div>
         </div>
@@ -275,6 +396,7 @@ function Contact() {
     </section>
   );
 }
+
 
 /* ---------- Footer ---------- */
 function Footer() {
@@ -287,7 +409,6 @@ function Footer() {
           Outcomes depend on eBay’s review and policies.
         </p>
         <nav aria-label="Social">
-          <a href={site.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href={site.fiverr} target="_blank" rel="noopener noreferrer">Fiverr</a>
           <a href={`mailto:${site.email}`}>Email</a>
         </nav>
