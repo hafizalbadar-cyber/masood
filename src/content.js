@@ -6,9 +6,8 @@ export const site = {
   tagline: "Your eBay account, health and selling.",
   intro:
     "I’m Masood, a freelance eBay specialist. I help sellers remove defects and feedback that hurt their seller standing, and I advise on the strategy that keeps their sales growing.",
-  email: "hello@example.com", // TODO
-  fiverr: "https://www.fiverr.com/s/DmmXWZo", // TODO
-  linkedin: "https://www.linkedin.com/in/your-profile", // TODO
+  email: "masood.azhar456@gmail.com", 
+  fiverr: "https://www.fiverr.com/s/DmmXWZo", 
   availability: "Accepting new clients",
 };
 export const ser =[
